@@ -5,7 +5,6 @@ import Suppliers from '../views/Suppliers.vue'
 import Warehouse from '../views/Warehouse.vue'
 import Store from '../views/Store.vue'
 
-
 const routes = [
   {
     path: '/',
