@@ -1,7 +1,10 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/">Home</router-link>
+    <router-link :to="{ name: "Customers" }">Customers</router-link>
+    <router-link :to="{ name: "Suppliers" }">Suppliers</router-link>
+    <router-link :to="{ name: "Warehouse" }">Warehouse</router-link>
+    <router-link :to="{ name: "Store" }">Store</router-link>
   </div>
   <router-view/>
 </template>
