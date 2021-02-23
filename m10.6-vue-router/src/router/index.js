@@ -4,6 +4,9 @@ import Customers from '../views/Customers.vue'
 import Suppliers from '../views/Suppliers.vue'
 import Warehouse from '../views/Warehouse.vue'
 import Store from '../views/Store.vue'
+import CustomerDetails from '../views/CustomerDetails.vue'
+import Food from '../views/Food.vue'
+import FrozenFood from '../views/FrozenFood.vue'
 
 const routes = [
   {
@@ -30,6 +33,21 @@ const routes = [
     path: '/store',
     name: 'Store',
     component: Store
+  },
+  {
+    path: '/customers/:name',
+    name: 'CustomerDetails',
+    component: CustomerDetails
+  },
+  {
+    path: '/store/food',
+    name: 'Food',
+    component: Food
+  },
+  {
+    path: '/store/frozen-food',
+    name: 'FrozenFood',
+    component: FrozenFood
   }
 ]
 

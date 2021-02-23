@@ -5,7 +5,13 @@
     <router-link :to="{ name: 'Customers' }">Customers</router-link>
     <router-link :to="{ name: 'Suppliers' }">Suppliers</router-link>
     <router-link :to="{ name: 'Warehouse' }">Warehouse</router-link>
-    <router-link :to="{ name: 'Store' }">Store</router-link>
+    <div class="dropdown">
+      <button class="dropbtn">Store</button>
+      <div class="dropdown-content">
+        <router-link :to="{ name: 'Food' }">Food</router-link>
+        <router-link :to="{ name: 'FrozenFood' }">Frozen Food</router-link>
+      </div>
+    </div>
   </div>
   <router-view/>
 </template>
@@ -22,6 +28,45 @@
 
 #nav {
   padding: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropdown {
+  display: flex;
+}
+
+.dropbtn {
+  font-weight: bold;
+  color: #2c3e50;
+  border: none;
+  outline: none;
+  background-color: rgb(255, 255, 255);
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 8px;
+  padding: 11.2px;
+  font-family: inherit;
+}
+
+.dropbtn:hover {
+  color: #42b983;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  margin-left: 1rem;
 }
 
 #nav a {
